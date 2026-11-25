@@ -1,1 +1,281 @@
-style.css
+/* Basic Styling */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fc;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header span, .hero span {
+    color: #60a5fa;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* Navigation */
+nav {
+    background: #1e3a8a;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+/* Common Sections */
+section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+h2 {
+    color: #172554;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    background: #e8efff;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 38px;
+}
+
+.hero-text p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.hero img {
+    width: 45%;
+    border-radius: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #172554;
+}
+
+/* Course Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.cards article {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px #00000015;
+    transition: 0.3s;
+}
+
+.cards article:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px #00000025;
+}
+
+.cards img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.cards h3 {
+    color: #1e3a8a;
+}
+
+.cards p {
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+.cards a {
+    display: inline-block;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+/* Resources */
+.resources {
+    display: flex;
+    gap: 25px;
+    text-align: left;
+}
+
+.resources article, aside {
+    flex: 1;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000010;
+}
+
+.resources li {
+    margin: 15px 0;
+}
+
+.resources a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+aside {
+    background: #dbeafe;
+}
+
+/* Featured Image */
+.featured {
+    background: #e8efff;
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 65%;
+    border-radius: 12px;
+}
+
+figcaption {
+    margin-top: 12px;
+    color: #666;
+}
+
+/* Media */
+.media-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+video {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+audio {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+/* About */
+.about {
+    background: white;
+}
+
+.about p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer h3 {
+    color: #60a5fa;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero, .resources {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img, figure img {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 35px 6%;
+    }
+}
